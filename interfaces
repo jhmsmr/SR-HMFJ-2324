@@ -1,0 +1,23 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+
+#CLIENTE 1 - RED 1
+auto enp0s3
+iface enp0s3 inet dhcp
+#	address 172.17.22.10
+#	netmask 255.255.255.0
+#	gateway 172.17.22.11
+
+
+	#Rutas añadidas al levantarse la tarjeta
+	#RUTA PREDETERMINADA
+#	up ip r add 172.17.23.0/24 via 172.17.22.11 dev enp0s3
+#	up ip r add 172.17.24.0/24 via 172.17.22.11 dev enp0s3
